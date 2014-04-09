@@ -1,0 +1,148 @@
+APP_NAME   = render
+CPP_FLAGS  = -c
+
+$(APP_NAME): Render.o Vector.o Point.o Normal.o Image.o Sphere.o Group.o HitRecord.o LambertianMaterial.o PinholeCamera.o Plane.o PointLight.o RenderContext.o Scene.o Color.o DirectLight.o OrthoCamera.o Disk.o Ring.o Triangle.o Box.o Heightfield.o PhongMaterial.o MetalMaterial.o DielectricMaterial.o BBox.o BVH.o CheckerMaterial.o PhongImageMaterial.o SpherePolar.o PerlinNoise.o PhongMarbleMaterial.o TileMaterial.o JitterSample.o BoxFilter.o TentFilter.o CubicSplineFilter.o PhongVolumeMaterial.o Colormap.o Matrix.o Instance.o ThinLensCamera.o DiskSample.o InfiniteAreaLight.o TextureBackground.o ImageMaterial.o
+	g++ -O2 Render.o Vector.o Point.o Normal.o Image.o Sphere.o Group.o HitRecord.o LambertianMaterial.o PinholeCamera.o Plane.o PointLight.o RenderContext.o Scene.o Color.o DirectLight.o OrthoCamera.o Disk.o Ring.o Triangle.o Box.o Heightfield.o PhongMaterial.o MetalMaterial.o DielectricMaterial.o BBox.o BVH.o CheckerMaterial.o PhongImageMaterial.o SpherePolar.o PerlinNoise.o PhongMarbleMaterial.o TileMaterial.o JitterSample.o BoxFilter.o TentFilter.o CubicSplineFilter.o PhongVolumeMaterial.o Colormap.o Matrix.o Instance.o ThinLensCamera.o DiskSample.o InfiniteAreaLight.o TextureBackground.o ImageMaterial.o -o $(APP_NAME)
+
+Render.o: Render.cpp
+	g++ $(CPP_FLAGS) Render.cpp
+
+Vector.o: Vector.cpp
+	g++ $(CPP_FLAGS) Vector.cpp
+	
+Point.o: Point.cpp
+	g++ $(CPP_FLAGS) Point.cpp
+
+Normal.o: Normal.cpp 
+	g++ $(CPP_FLAGS) Normal.cpp
+
+Image.o: Image.cpp
+	g++ $(CPP_FLAGS) Image.cpp
+
+Sphere.o: Sphere.cpp
+	g++ $(CPP_FLAGS) Sphere.cpp
+	
+Group.o: Group.cpp
+	g++ $(CPP_FLAGS) Group.cpp
+	
+HitRecord.o: HitRecord.cpp
+	g++ $(CPP_FLAGS) HitRecord.cpp
+	
+LambertianMaterial.o: LambertianMaterial.cpp
+	g++ $(CPP_FLAGS) LambertianMaterial.cpp
+	
+PinholeCamera.o: PinholeCamera.cpp
+	g++ $(CPP_FLAGS) PinholeCamera.cpp
+	
+Plane.o: Plane.cpp
+	g++ $(CPP_FLAGS) Plane.cpp
+	
+PointLight.o: PointLight.cpp
+	g++ $(CPP_FLAGS) PointLight.cpp
+	
+RenderContext.o: RenderContext.cpp
+	g++ $(CPP_FLAGS) RenderContext.cpp
+	
+Scene.o: Scene.cpp
+	g++ $(CPP_FLAGS) Scene.cpp
+	
+Color.o: Color.cpp
+	g++ $(CPP_FLAGS) Color.cpp
+	
+DirectLight.o: DirectLight.cpp
+	g++ $(CPP_FLAGS) DirectLight.cpp
+	
+OrthoCamera.o: OrthoCamera.cpp
+	g++ $(CPP_FLAGS) OrthoCamera.cpp
+
+Disk.o: Disk.cpp
+	g++ $(CPP_FLAGS) Disk.cpp
+
+Ring.o: Ring.cpp
+	g++ $(CPP_FLAGS) Ring.cpp
+
+Triangle.o: Triangle.cpp
+	g++ $(CPP_FLAGS) Triangle.cpp
+
+Box.o: Box.cpp
+	g++ $(CPP_FLAGS) Box.cpp
+
+Heightfield.o: Heightfield.cpp
+	g++ $(CPP_FLAGS) Heightfield.cpp
+
+PhongMaterial.o: PhongMaterial.cpp
+	g++ $(CPP_FLAGS) PhongMaterial.cpp
+
+MetalMaterial.o: MetalMaterial.cpp
+	g++ $(CPP_FLAGS) MetalMaterial.cpp
+
+DielectricMaterial.o: DielectricMaterial.cpp
+	g++ $(CPP_FLAGS) DielectricMaterial.cpp
+
+BBox.o: BBox.cpp
+	g++ $(CPP_FLAGS) BBox.cpp
+
+BVH.o: BVH.cpp
+	g++ $(CPP_FLAGS) BVH.cpp
+
+CheckerMaterial.o: CheckerMaterial.cpp
+	g++ $(CPP_FLAGS) CheckerMaterial.cpp
+
+PhongImageMaterial.o: PhongImageMaterial.cpp
+	g++ $(CPP_FLAGS) PhongImageMaterial.cpp
+
+SpherePolar.o: SpherePolar.cpp
+	g++ $(CPP_FLAGS) SpherePolar.cpp
+
+PerlinNoise.o: PerlinNoise.cpp
+	g++ $(CPP_FLAGS) PerlinNoise.cpp
+
+PhongMarbleMaterial.o: PhongMarbleMaterial.cpp
+	g++ $(CPP_FLAGS) PhongMarbleMaterial.cpp
+
+TileMaterial.o: TileMaterial.cpp
+	g++ $(CPP_FLAGS) TileMaterial.cpp
+
+JitterSample.o: JitterSample.cpp
+	g++ $(CPP_FLAGS) JitterSample.cpp
+
+BoxFilter.o: BoxFilter.cpp
+	g++ $(CPP_FLAGS) BoxFilter.cpp
+
+CubicSplineFilter.o: CubicSplineFilter.cpp
+	g++ $(CPP_FLAGS) CubicSplineFilter.cpp
+
+PhongVolumeMaterial.o: PhongVolumeMaterial.cpp
+	g++ $(CPP_FLAGS) PhongVolumeMaterial.cpp
+
+Colormap.o: Colormap.cpp
+	g++ $(CPP_FLAGS) Colormap.cpp
+
+Matrix.o: Matrix.cpp
+	g++ $(CPP_FLAGS) Matrix.cpp
+
+Instance.o: Instance.cpp
+	g++ $(CPP_FLAGS) Instance.cpp
+
+ThinLensCamera.o: ThinLensCamera.cpp
+	g++ $(CPP_FLAGS) ThinLensCamera.cpp
+
+DiskSample.o: DiskSample.cpp
+	g++ $(CPP_FLAGS) DiskSample.cpp
+
+InfiniteAreaLight.o: InfiniteAreaLight.cpp
+	g++ $(CPP_FLAGS) InfiniteAreaLight.cpp
+
+TextureBackground.o: TextureBackground.cpp
+	g++ $(CPP_FLAGS) TextureBackground.cpp
+
+ImageMaterial.o: ImageMaterial.cpp
+	g++ $(CPP_FLAGS) ImageMaterial.cpp
+
+explain:
+	@echo "APP_NAME   == $(APP_NAME)"
+	@echo "CPP_FLAGS  == $(CPP_FLAGS)"
+
+clean:
+	rm -f $(APP_NAME)
+	rm -f *.o
